@@ -1,0 +1,32 @@
+﻿/*.Actor-section .table th{
+    color: white;
+}
+body {
+    background-color: #181a1c;
+   
+}
+.navbar {
+  
+}
+
+.card .card-body {
+    background-color: #323032;
+}*/
+.dropdown-menu .dropdown-item a:focus, .dropdown-menu .dropdown-item a:active {
+    color: white;
+}
+
+.card img {
+    width: 100%;
+    height: 587px;
+}
+
+.Create_New_button a, .nav-item a, .navbar .nav-link a, .Actor-section table td a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu .dropdown-item a {
+    color: black;
+    text-decoration: none;
+}

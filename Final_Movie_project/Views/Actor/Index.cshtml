@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Final_Movie_project.Models.Actor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<section class="Actor-section text-light">
+
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+
+            <table class="table">
+                <thead>
+                    <tr class="text-center">
+                        <th>img</th>
+                        <th>@Html.DisplayNameFor(model => model.FirstName)</th>
+                        <th>@Html.DisplayNameFor(model => model.LastName)</th>
+                        <th>@Html.DisplayNameFor(model => model.Age)</th>
+
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                        {
+                            <th>Actions</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="align-middle">
+                                <img class="rounded-circle" src="~/images/profiles/no-user.png" alt="@item.FirstName" style="max-width: 150px" />
+                            </td>
+                            <td class="align-middle">
+                                @Html.DisplayFor(modelItem => item.FirstName)
+                            </td>
+
+                            <td class="align-middle">
+                                @Html.DisplayFor(modelItem => item.LastName)
+                            </td>
+
+                            <td class="align-middle">
+                                @Html.DisplayFor(modelItem => item.Age)
+                            </td>
+
+
+
+                            <td class="align-middle">
+                                <button class="btn btn-primary">
+                                <i class="bi bi-pencil-square"></i>
+                                @Html.ActionLink("Edit", "Index", "Actor") 
+                                    
+                                </button> |
+
+                                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.ActorId"><i class="bi bi-eye"></i>Details </a> |
+                                <a class="btn btn-danger text-white" asp-action="Delete" asp-route-id="@item.ActorId"><i class="bi bi-trash"></i>Delete </a>
+                            </td>
+
+
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</section>
+

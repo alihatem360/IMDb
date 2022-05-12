@@ -1,0 +1,51 @@
+﻿@model Final_Movie_project.Models.Movie
+
+@{
+    ViewBag.Title = "MovieDetails";
+}
+
+<h2>MovieDetails</h2>
+
+<div>
+    <h4>Movie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Director.Fname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Director.Fname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovieName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+        <dd>
+            @if (Model.Image != null)
+            {
+                <div class="image-size">
+                    <img src="~/images/profiles/@Model.Image" alt="error" class="img-responsive image-center" width="100" height="100" />
+                </div>
+            }
+            else
+            {
+                <img src="~/images/profiles/no-user.png" width="100" height="100" />
+
+            }
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MovieId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

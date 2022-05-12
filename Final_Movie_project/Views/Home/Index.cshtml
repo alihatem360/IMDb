@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Final_Movie_project.Models.Movie>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <button class="btn btn-success Create_New_button">@Html.ActionLink("Create New", "CreateNewMovie", "Movie")</button>
+</p>
+
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-4 col-md-6 col-sm-12">
+
+            <div class="card w-100 my-5" style="width: 18rem;">
+                @if (item.Image != null)
+                {
+                    <div class="image-size w-100">
+                        <img src="~/images/profiles/@item.Image" alt="error" class=" image-center card-img-top" />
+                    </div>
+                }
+                else
+                {
+                    <img src="~/images/profiles/no-user.png" width="50" height="50" class="card-img-top" />
+                }
+
+                <div class="card-body">
+                    <h5 class="card-title">@item.MovieName</h5>
+                    <p class="card-text"> </p>
+                    <div class="form-group">
+
+                        <button class="btn btn-outline-primary">
+                            <i class="bi bi-eye-fill"></i> @Html.ActionLink("Details", "MovieDetails", "Movie", new { id = item.MovieId }, new { })
+                        </button>
+
+                        <button class="btn btn-success text-white mx-5">
+
+                            <i class="bi bi-pencil-square"></i> @Html.ActionLink("Edit", "MovieEdit", "Movie", new { id = item.MovieId }, new { })
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    }
+
+
+</div>
+
+
+
+
+
