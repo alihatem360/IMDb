@@ -31,6 +31,8 @@ namespace Final_Movie_project.Models
         public int DirectortId { get; set; }
         public virtual Director Director { get; set; }
 
+        //public virtual Actor Actor { get; set; }
+
         public virtual ICollection<ActorMovie> ActorMovie { get; set; }
 
 

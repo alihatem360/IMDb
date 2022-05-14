@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "CreateNewActor", "Actor")
 </p>
 <section class="Actor-section text-light">
 
@@ -31,37 +31,46 @@
                 <tbody>
                     @foreach (var item in Model)
                     {
-                        <tr>
-                            <td class="align-middle">
-                                <img class="rounded-circle" src="~/images/profiles/no-user.png" alt="@item.FirstName" style="max-width: 150px" />
-                            </td>
-                            <td class="align-middle">
-                                @Html.DisplayFor(modelItem => item.FirstName)
-                            </td>
+                    <tr>
+                        <td class="align-middle">
+                            <img class="rounded-circle" src="~/images/profiles/no-user.png" alt="@item.FirstName" style="max-width: 150px" />
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.FirstName)
+                        </td>
 
-                            <td class="align-middle">
-                                @Html.DisplayFor(modelItem => item.LastName)
-                            </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.LastName)
+                        </td>
 
-                            <td class="align-middle">
-                                @Html.DisplayFor(modelItem => item.Age)
-                            </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Age)
+                        </td>
 
 
-
-                            <td class="align-middle">
-                                <button class="btn btn-primary">
+                        <td class="align-middle">
+                            <button class="btn btn-primary">
                                 <i class="bi bi-pencil-square"></i>
-                                @Html.ActionLink("Edit", "Index", "Actor") 
-                                    
-                                </button> |
+                                @Html.ActionLink("Edit", "EditActor", "Actor", new { id = item.ActorId }, new { })
 
-                                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.ActorId"><i class="bi bi-eye"></i>Details </a> |
-                                <a class="btn btn-danger text-white" asp-action="Delete" asp-route-id="@item.ActorId"><i class="bi bi-trash"></i>Delete </a>
-                            </td>
+                            </button> |
+
+                            <button class="btn btn-info">
+                                <i class="bi bi-eye"></i>
+                                @Html.ActionLink("Details", "ActorDetails", "Actor", new { id = item.ActorId } , new { })
+
+                            </button> |
+
+                            <button class="btn btn-danger">
+                                <i class="bi bi-eye"></i>
+                                @Html.ActionLink("Delete", "DeleteActor", "Actor", new { id = item.ActorId }, new { })
+
+                            </button>
+
+                        </td>
 
 
-                        </tr>
+                    </tr>
                     }
                 </tbody>
 

@@ -29,6 +29,8 @@ namespace Final_Movie_project.Models
         /// <summary>
         /// Relationships
         /// </summary>
+        //public virtual Movie Movies { get; set; }
+
         public virtual ICollection<Movie> Movie { get; set; }
 
 

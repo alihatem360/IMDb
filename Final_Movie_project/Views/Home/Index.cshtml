@@ -28,22 +28,24 @@
                     <img src="~/images/profiles/no-user.png" width="50" height="50" class="card-img-top" />
                 }
 
-                <div class="card-body">
-                    <h5 class="card-title">@item.MovieName</h5>
-                    <p class="card-text"> </p>
-                    <div class="form-group">
+                    <div class="card-body">
+                        <p class="card-title">Movie Name: <span>@item.MovieName</span></p>
+                        <p class="card-title">Director Name: <span>@item.Director.Fname</span></p>
 
-                        <button class="btn btn-outline-primary">
-                            <i class="bi bi-eye-fill"></i> @Html.ActionLink("Details", "MovieDetails", "Movie", new { id = item.MovieId }, new { })
-                        </button>
+                        <p class="card-text"> </p>
+                        <div class="form-group">
 
-                        <button class="btn btn-success text-white mx-5">
+                            <button class="btn btn-outline-primary">
+                                <i class="bi bi-eye-fill"></i> @Html.ActionLink("Details", "MovieDetails", "Movie", new { id = item.MovieId }, new { })
+                            </button>
 
-                            <i class="bi bi-pencil-square"></i> @Html.ActionLink("Edit", "MovieEdit", "Movie", new { id = item.MovieId }, new { })
-                        </button>
+                            <button class="btn btn-success text-white mx-5">
+
+                                <i class="bi bi-pencil-square"></i> @Html.ActionLink("Edit", "MovieEdit", "Movie", new { id = item.MovieId }, new { })
+                            </button>
+                        </div>
+
                     </div>
-
-                </div>
             </div>
 
 

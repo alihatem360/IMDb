@@ -1,4 +1,5 @@
 ﻿@model Final_Movie_project.ViewModel.Movie_Diretor_View_Model
+@using Final_Movie_project.Models;
 
 @{
     ViewBag.Title = "CreateNewMovie";
@@ -38,9 +39,20 @@
             </div>
         </div>
 
+        @*<div class="form-group">
+            <label>Actor Name</label>
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.ActorId, new SelectList(Model.Actor, "ActorId", "FirstName"), "Select Director Name", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Movie.DirectortId, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+<in
+
+
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                
+
                 <button type="submit" class="btn  btn-success"> <i class="bi bi-file-plus"></i>Create</button>
             </div>
         </div>

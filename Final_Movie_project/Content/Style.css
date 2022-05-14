@@ -30,3 +30,16 @@ body {
     color: black;
     text-decoration: none;
 }
+
+.card .card-body span:first-child{
+    font-size: 18px;
+    padding: 7px 16px;
+    font-weight: 700;
+    background-color: #5d8642;
+    border-radius: 21px;
+}
+
+.card .card-body .card-title {
+    font-size: 30px;
+    font-weight: 600;
+}

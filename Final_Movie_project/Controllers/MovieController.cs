@@ -65,6 +65,7 @@ namespace Final_Movie_project.Controllers
         public ActionResult MovieDetails(int id)
         {
             var Movie = MovieDataContext.Movies.SingleOrDefault(x => x.MovieId == id);
+            
             if (Movie == null)
             {
                 return HttpNotFound();
