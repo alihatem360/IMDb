@@ -1,3 +1,30 @@
+<<<<<<< HEAD:Final_Movie_project.sln
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1831
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Final_Movie_project", "Final_Movie_project\Final_Movie_project.csproj", "{460494DB-4F81-433D-82DB-6E78B7EBA299}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{460494DB-4F81-433D-82DB-6E78B7EBA299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{460494DB-4F81-433D-82DB-6E78B7EBA299}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{460494DB-4F81-433D-82DB-6E78B7EBA299}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{460494DB-4F81-433D-82DB-6E78B7EBA299}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD884BE3-BCFE-421A-8F82-EDDE62E71766}
+	EndGlobalSection
+EndGlobal
+=======
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
@@ -23,3 +50,4 @@ Global
 		SolutionGuid = {ADF8C846-D8EE-468B-9879-FEAAE50949F0}
 	EndGlobalSection
 EndGlobal
+>>>>>>> main:complete-ecommerce-aspnet-mvc-application-master/eTickets.sln
