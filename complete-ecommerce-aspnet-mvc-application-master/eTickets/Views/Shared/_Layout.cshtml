@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow">
             <div class="container-fluid">
                
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
@@ -20,7 +20,7 @@
                         @if(User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                         {
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="bi bi-gear"></i> Management
                                     </a>
 
@@ -47,13 +47,13 @@
         </nav>
     </header>
     <div class="container-fluid">
-        <main role="main" class="pb-3">
+        <main role="main" class="">
             @RenderBody()
         </main>
 
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted bg-dark">
         <div class="container">
             &copy; 2021 - eTickets
         </div>
